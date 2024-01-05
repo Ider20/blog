@@ -1,8 +1,21 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import { Header } from "../Components/Header";
+import { SlideNews } from "../Components/SlideNews";
+import { Trending } from "../Components/Trending";
+import { AllBlogPost } from "../Components/AllBlogPost";
+import { Footer } from "../Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Header />
+      <SlideNews />
+      <Trending />
+      <AllBlogPost />
+      <Footer />
+    </>
+  );
 }
