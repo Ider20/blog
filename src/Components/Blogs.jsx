@@ -1,8 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { Header } from "../Components/Header";
+import { Footer } from "../Components/Footer";
 
-export const AllBlogPost = () => {
+export const Blogs = () => {
   const [articles, setArticles] = useState([]);
   const [showArticles, setShowArticles] = useState(6);
 
@@ -15,40 +16,12 @@ export const AllBlogPost = () => {
   const handleShowMore = () => {
     setShowArticles(showArticles + 3);
   };
+
   return (
-    <div className="w-[1216px] m-auto">
-      <div className="text-base font-bold mb-7">All Blog Post</div>
-      <ul className="text-sm flex gap-5 font-semibold cursor-pointer mb-12">
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">All</li>
-        </Link>
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">
-            Design
-          </li>
-        </Link>
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">
-            Travel
-          </li>
-        </Link>
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">
-            Fashion
-          </li>
-        </Link>
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">
-            Technology
-          </li>
-        </Link>
-        <Link href={"./blog"}>
-          <li className="hover:text-[#d4a373] ease-in-out duration-200">
-            Branding
-          </li>
-        </Link>
-      </ul>
-      <div>
+    <div>
+      <Header />
+      <div className="w-[1216px] m-auto">
+        <div className="text-2xl font-bold mb-10">All Blog Post</div>
         <div className="flex flex-wrap justify-between gap-y-5">
           {articles.slice(0, showArticles).map((article) => {
             return (
@@ -89,8 +62,9 @@ export const AllBlogPost = () => {
           <button onClick={() => handleShowMore()}>Load More</button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
 
-export default AllBlogPost;
+export default Blogs;

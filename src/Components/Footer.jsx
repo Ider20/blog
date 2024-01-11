@@ -3,6 +3,7 @@ import { FaceBook } from "../Components/Icons/FaceBook";
 import { Twitter } from "../Components/Icons/Twitter";
 import { Insta } from "../Components/Icons/Insta";
 import { LinkDen } from "../Components/Icons/LinkDen";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -23,39 +24,73 @@ export const Footer = () => {
           </div>
           <div className="w-[521px] flex justify-center">
             <ul>
-              <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black">
-                Home
-              </li>
-              <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black">
-                Blog
-              </li>
-              <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black">
-                Contact
-              </li>
+              <Link href={"http://localhost:3000"}>
+                <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black ease-in-out duration-300">
+                  Home
+                </li>
+              </Link>
+              <Link href={"/blog"}>
+                <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black ease-in-out duration-300">
+                  Blog
+                </li>
+              </Link>
+              <Link href={"/contact"}>
+                <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black ease-in-out duration-300">
+                  Contact
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="flex gap-[26.6px] h-2">
-            <div className="cursor-pointer">
-              <FaceBook />
-            </div>
-            <div className="cursor-pointer">
-              <Twitter />
-            </div>
-            <div className="cursor-pointer">
-              <Insta />
-            </div>
-            <div className="cursor-pointer">
-              <LinkDen />
-            </div>
+            <Link href={"/nopage"}>
+              <div className="cursor-pointer hover:scale-125 ease-in-out duration-200">
+                <FaceBook />
+              </div>
+            </Link>
+            <Link href={"/nopage"}>
+              <div className="cursor-pointer hover:scale-125 ease-in-out duration-200">
+                <Twitter />
+              </div>
+            </Link>
+
+            <Link href={"/nopage"}>
+              <div className="cursor-pointer hover:scale-125 ease-in-out duration-200">
+                <Insta />
+              </div>
+            </Link>
+
+            <Link href={"/nopage"}>
+              <div className="cursor-pointer hover:scale-125 ease-in-out duration-200">
+                <LinkDen />
+              </div>
+            </Link>
           </div>
         </div>
         <hr className="w-[1216px] m-auto" />
-        <div className="w-[1216px] flex m-auto justify-between mt-[32px]">
-          <img src="/BottomLogo.png" alt="" className="w-[230px] h-[64px]" />
-          <div>
-            <p>Terms of Use</p>
-            <p>Privacy Policy</p>
-            <p>Coockie Policy</p>
+        <div className="w-[1216px] flex m-auto justify-between mt-[32px] ">
+          <Link href={"http://localhost:3000"}>
+            <img src="/BottomLogo.png" alt="" className="w-[230px] h-[64px]" />
+          </Link>
+          <div className="flex gap-4 text-[#3b3c4a] items-center">
+            <Link href={"/nopage"}>
+              <p className="cursor-pointer hover:text-[#d4a373] ease-in-out duration-200">
+                Terms of Use
+              </p>
+            </Link>
+
+            <div className="h-5 w-[0.2px] border-l border-[#e8e8ea]"></div>
+            <Link href={"/nopage"}>
+              <p className="cursor-pointer hover:text-[#d4a373] ease-in-out duration-200">
+                Privacy Policy
+              </p>
+            </Link>
+
+            <div className="h-5 w-[0.2px] border-l border-[#e8e8ea]"></div>
+            <Link href={"/nopage"}>
+              <p className="cursor-pointer hover:text-[#d4a373] ease-in-out duration-200">
+                Coockie Policy
+              </p>
+            </Link>
           </div>
         </div>
       </div>
