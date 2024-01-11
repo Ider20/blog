@@ -35,15 +35,24 @@ export const Header = () => {
           </li>
         </Link>
       </ul>
-      <input
-        placeholder="Search"
-        type="text"
-        name=""
-        id=""
-        className="border rounded-lg p-1"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
-      />
+      <div className="flex ">
+        <input
+          placeholder="Search"
+          type="text"
+          name=""
+          id=""
+          className="p-1 pl-3 border rounded-lg bg-[#F4F4F5] text-sm"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+        <div className="absolute ml-[150px] mt-[3px]">
+          <i
+            // <i class="fa-thin fa-magnifying-glass" style="color: #ababab;"></i>
+            class="fa-solid fa-magnifying-glass"
+            style={{ color: "#ababab" }}
+          ></i>
+        </div>
+      </div>
     </div>
   );
 };
