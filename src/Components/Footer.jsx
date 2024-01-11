@@ -24,7 +24,7 @@ export const Footer = () => {
           </div>
           <div className="w-[521px] flex justify-center">
             <ul>
-              <Link href={"http://localhost:3000"}>
+              <Link href={"http://https://blog-azure-ten-88.vercel.app/"}>
                 <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black ease-in-out duration-300">
                   Home
                 </li>
@@ -68,7 +68,7 @@ export const Footer = () => {
         </div>
         <hr className="w-[1216px] m-auto" />
         <div className="w-[1216px] flex m-auto justify-between mt-[32px] ">
-          <Link href={"http://localhost:3000"}>
+          <Link href={"http://https://blog-azure-ten-88.vercel.app/"}>
             <img src="/BottomLogo.png" alt="" className="w-[230px] h-[64px]" />
           </Link>
           <div className="flex gap-4 text-[#3b3c4a] items-center">
