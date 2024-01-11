@@ -68,7 +68,7 @@ export const Footer = () => {
         </div>
         <hr className="w-[1216px] m-auto" />
         <div className="w-[1216px] flex m-auto justify-between mt-[32px] ">
-          <Link href={"http://https://blog-azure-ten-88.vercel.app/"}>
+          <Link href={"http://blog-azure-ten-88.vercel.app/"}>
             <img src="/BottomLogo.png" alt="" className="w-[230px] h-[64px]" />
           </Link>
           <div className="flex gap-4 text-[#3b3c4a] items-center">
