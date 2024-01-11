@@ -24,7 +24,7 @@ export const Footer = () => {
           </div>
           <div className="w-[521px] flex justify-center">
             <ul>
-              <Link href={"http://https://blog-azure-ten-88.vercel.app/"}>
+              <Link href={"http://blog-azure-ten-88.vercel.app/"}>
                 <li className="mb-2 cursor-pointer text-[#696a75] hover:text-black ease-in-out duration-300">
                   Home
                 </li>
