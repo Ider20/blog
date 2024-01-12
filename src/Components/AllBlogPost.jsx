@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useContext } from "react";
 import { SearchContextValue } from "../Context/SearchContext";
-
 import { SearchProvider } from "@/Context/SearchContext";
 
 export const AllBlogPost = () => {
