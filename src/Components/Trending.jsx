@@ -10,7 +10,7 @@ export const Trending = () => {
       .then((data) => setArticles(data));
   }, []);
   return (
-    <div className="flex flex-col mt-[30px] w-[375px] px-[32px] lg:w-[1216px] lg:m-auto lg:p-0 lg:mt-0">
+    <div className="flex flex-col  w-[375px] px-[32px] pt-[100px] lg:pt-0 lg:w-[1216px] lg:m-auto lg:p-0 lg:mt-0">
       <div className="text-base font-bold mb-7">Trendding</div>
 
       <div className="flex flex-col items-center lg:items-start lg:flex-row lg:flex lg:gap-6 lg:mb-28">

@@ -6,7 +6,7 @@ export const Contacts = () => {
   return (
     <div>
       <Header />
-      <div className="w-[624px] m-auto mb-28 ">
+      <div className="pt-[100px] lg:pt-[180px] lg:w-[624px] m-auto mb-28 ">
         <div className="mb-5 text-4xl font-semibold">Contact Us</div>
         <div className="mb-5 text-[#696A75]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

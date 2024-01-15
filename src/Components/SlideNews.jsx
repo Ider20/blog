@@ -24,7 +24,7 @@ export const SlideNews = () => {
   }
 
   return (
-    <div className="">
+    <div className="lg:pt-[180px]">
       <div className="hidden lg:flex lg:flex-col lg: lg:w-[1216px] lg:m-auto ">
         <div className="relative">
           <img

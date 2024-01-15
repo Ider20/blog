@@ -7,7 +7,7 @@ export const ErrorPage = () => {
   return (
     <div>
       <Header />
-      <div className="w-[1216px] m-auto">
+      <div className="pt-[120px] lg:w-[1216px] m-auto">
         <div className="text-[100px] text-[#696A75] flex justify-center">
           Sorry
         </div>

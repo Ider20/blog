@@ -28,7 +28,7 @@ export const Blogs = () => {
   return (
     <div>
       <Header />
-      <div className="w-[1216px] m-auto">
+      <div className="pt-[150px] lg:w-[1216px] m-auto">
         <div className="text-2xl font-bold mb-10">All Blog Post</div>
         <div className="flex flex-wrap justify-between gap-y-5">
           {searchArticles.slice(0, showArticles).map((article) => {
