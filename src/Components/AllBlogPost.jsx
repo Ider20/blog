@@ -32,9 +32,11 @@ export const AllBlogPost = () => {
   console.log(searchValue);
   console.log(searchArticles, "searchArticles");
   return (
-    <div className="w-[1216px] m-auto">
-      <div className="text-base font-bold mb-7">All Blog Post</div>
-      <ul className="text-sm flex gap-5 font-semibold cursor-pointer mb-12">
+    <div className="lg:w-[1216px] m-auto">
+      <div className=" px-[32px] mt-[56px] text-base font-bold mb-7 lg:px-0 lg:mt-0">
+        All Blog Post
+      </div>
+      <ul className="text-sm hidden lg:flex gap-5 font-semibold cursor-pointer mb-12">
         <Link href={"./blog"}>
           <li className="hover:text-[#d4a373] ease-in-out duration-200">All</li>
         </Link>
@@ -65,12 +67,12 @@ export const AllBlogPost = () => {
         </Link>
       </ul>
       <div>
-        <div className="flex flex-wrap justify-between gap-y-5">
+        <div className="flex flex-col items-center lg:flex lg:flex-wrap lg:flex-row lg:justify-between lg:gap-y-5 lg:p-0">
           {searchArticles.slice(0, showArticles).map((article) => {
             return (
               <>
                 <Link href={`/${article.id}`}>
-                  <div className="border rounded-xl w-[392px] h-[476px] p-4 cursor-pointer">
+                  <div className="border rounded-xl mb-5 w-[292px] h-[420px] lg:w-[392px] lg:h-[476px] lg:p-4 cursor-pointer lg:mb-0">
                     <img
                       src={
                         article.cover_image
@@ -80,7 +82,7 @@ export const AllBlogPost = () => {
                       alt=""
                       className="object-cover w-90 h-60 rounded-lg"
                     />
-                    <div className="h-[200px] flex flex-col justify-between">
+                    <div className="px-4 h-[170px] lg:h-[200px] flex flex-col justify-between lg:px-0">
                       <div>
                         <div className="flex flex-wrap gap-2 mt-3 mb-3">
                           {article.tag_list.map((tag) => (
@@ -89,7 +91,7 @@ export const AllBlogPost = () => {
                             </div>
                           ))}
                         </div>
-                        <div className="text-2xl font-semibold">
+                        <div className="text-2xl font-semibold truncate">
                           {article.title}
                         </div>
                       </div>
@@ -101,7 +103,7 @@ export const AllBlogPost = () => {
             );
           })}
         </div>
-        <div className="w-[123px] h-[48px] flex justify-center items-center border rounded-lg m-auto my-[100px] hover:shadow-lg cursor-pointer ease-in-out duration-300">
+        <div className="w-[123px] h-[48px] flex justify-center items-center my-[40px] border rounded-lg m-auto lg:my-[100px] hover:shadow-lg cursor-pointer ease-in-out duration-300">
           <button onClick={() => handleShowMore()}>Load More</button>
         </div>
       </div>

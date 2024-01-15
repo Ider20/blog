@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { HamBurger } from "./Icons/HamBurger";
 import Link from "next/link";
 import { useContext } from "react";
 import { SearchContextValue } from "@/Context/SearchContext";
@@ -8,7 +8,7 @@ export const Header = () => {
   const { searchValue, setSearchValue } = useContext(SearchContextValue);
   // console.log(searchValue, "searchVlaue");
   return (
-    <div className="w-[1216px] flex m-auto justify-between py-8 items-center mb-10">
+    <div className="w-[375px] flex justify-between p-5 lg:w-[1216px] lg:flex lg:m-auto lg:justify-between lg:py-8 lg:items-center lg:mb-10">
       <div>
         <Link href={"http://blog-azure-ten-88.vercel.app/"}>
           <img
@@ -18,7 +18,7 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <ul className="flex gap-10">
+      <ul className="hidden lg:flex lg:gap-10">
         <Link href={"http://blog-azure-ten-88.vercel.app/"}>
           <li className="hover:text-[#d4a373] active:scale-95 ease-out duration-300">
             Home
@@ -35,7 +35,7 @@ export const Header = () => {
           </li>
         </Link>
       </ul>
-      <div className="flex ">
+      <div className="hidden lg:flex ">
         <input
           placeholder="Search"
           type="text"
@@ -52,6 +52,9 @@ export const Header = () => {
             style={{ color: "#ababab" }}
           ></i>
         </div>
+      </div>
+      <div className="lg:hidden">
+        <HamBurger />
       </div>
     </div>
   );

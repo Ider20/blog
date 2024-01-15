@@ -10,13 +10,14 @@ export const Trending = () => {
       .then((data) => setArticles(data));
   }, []);
   return (
-    <div className="w-[1216px] m-auto">
+    <div className="flex flex-col mt-[30px] w-[375px] px-[32px] lg:w-[1216px] lg:m-auto lg:p-0 lg:mt-0">
       <div className="text-base font-bold mb-7">Trendding</div>
-      <div className="flex gap-6 mb-28">
+
+      <div className="flex flex-col items-center lg:items-start lg:flex-row lg:flex lg:gap-6 lg:mb-28">
         <Link href={`/${articles[1]?.id}`}>
           {" "}
           <div
-            className={`w-[289px] h-[320px] relative`}
+            className={`mb-[41px] w-[289px] h-[320px] relative`}
             //   style={{ backgroundImage: `url(${articles[1]?.cover_image})` }}
           >
             <img
@@ -46,7 +47,7 @@ export const Trending = () => {
         </Link>
         <Link href={`/${articles[2]?.id}`}>
           {" "}
-          <div className="w-[289px] h-[320px] relative ">
+          <div className="hidden lg:flex w-[289px] h-[320px] relative ">
             {" "}
             <img
               src={
@@ -75,7 +76,7 @@ export const Trending = () => {
         </Link>
         <Link href={`/${articles[3]?.id}`}>
           {" "}
-          <div className="w-[289px] h-[320px] relative">
+          <div className="hidden lg:flex w-[289px] h-[320px] relative">
             {" "}
             <img
               src={

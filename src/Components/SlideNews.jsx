@@ -25,7 +25,7 @@ export const SlideNews = () => {
 
   return (
     <div className="">
-      <div className="w-[1216px] m-auto ">
+      <div className="hidden lg:flex lg:flex-col lg: lg:w-[1216px] lg:m-auto ">
         <div className="relative">
           <img
             src={
